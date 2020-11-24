@@ -1,1 +1,1 @@
-# study-kiviy
+# study-kivy
