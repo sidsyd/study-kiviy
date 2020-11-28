@@ -4,14 +4,17 @@ from kivy.uix.widget import Widget
 from kivy.properties import StringProperty 
 
 class TextWidget(Widget):
-    text = StringProperty()    # プロパティの追加
+    text = StringProperty() # プロパティの追加
 
     def __init__(self, **kwargs):
         super(TextWidget, self).__init__(**kwargs)
         self.text = ''
 
-    def buttonClicked(self):        # ボタンをクリック時
-        self.text = 'Hello World'
+    def buttonEnglishClicked(self): # ボタンをクリック時
+        self.text = 'Hello'
+
+    def buttonJapaneseClicked(self): # ボタンをクリック時
+        self.text = 'Konnichiha'
 
 
 class TestApp(App):

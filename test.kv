@@ -4,15 +4,22 @@ TextWidget: # ルートに追加
     BoxLayout:
         orientation: 'vertical'
         size: root.size
+        BoxLayout:
+            # ラベル
+            Label:
+                id: label1
+                font_size: 68
+                text: root.text    # root(TextWidget)の変数テキストの値を取得
 
-        # ラベル
-        Label:
-            id: label1
-            font_size: 68
-            text: root.text    # root(TextWidget)の変数テキストの値を取得
+        BoxLayout:
+            Button:
+                id: button1
+                text: "English"
+                font_size: 68
+                on_press: root.buttonEnglishClicked()  # ボタンをクリックした時にpython側の関数を呼ぶ
 
-        Button:
-            id: button1
-            text: "OK"
-            font_size: 68
-            on_press: root.buttonClicked()  # ボタンをクリックした時にpython側の関数を呼ぶ
+            Button:
+                id: button1
+                text: "Japanese"
+                font_size: 68
+                on_press: root.buttonJapaneseClicked()  # ボタンをクリックした時にpython側の関数を呼ぶ
